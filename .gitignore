@@ -13,7 +13,7 @@ env.bak/
 venv.bak/
 
 # Jupyter
-*.ipynb
+.ipynb_checkpoints/*
 
 # Pycharm
 .idea/*
