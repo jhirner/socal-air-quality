@@ -20,3 +20,7 @@ venv.bak/
 
 # Other
 *.db
+
+# In-progress work
+*no2*
+*pm25*
