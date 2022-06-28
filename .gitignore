@@ -20,6 +20,9 @@ venv.bak/
 
 # Other
 *.db
+*.bash*
+*.cache*
+
 
 # In-progress work
 *no2*
