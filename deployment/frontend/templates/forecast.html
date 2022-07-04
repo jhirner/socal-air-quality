@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>
+            Los Angeles Ground-Level Ozone Forecast
+        </title>
+        
+        <link rel="stylesheet" href="{{ url_for('static', filename = 'gray_style.css') }}" type="text/css"></link>
+    </head>
+    <body>
+        <div id = "main-container">
+        <h1>Los Angeles Ground-Level Ozone Forecast</h1><p>
+
+        <div>While ozone is <a href = "https://www.epa.gov/ozone-layer-protection">critically important</a> high in the atmosphere, it can cause a variety of <a href = "https://www.epa.gov/ground-level-ozone-pollution/health-effects-ozone-pollution">health problems</a> at ground level.<p></div>
+
+       <div>This site implements a machine learning model to forecast ground-level ozone in <a href = "http://www.aqmd.gov/docs/default-source/clean-air-plans/air-quality-monitoring-network-plan/aaqmnp-losangeles.pdf?sfvrsn=16">downtown Los Angeles</a>.<p></div>
+
+       <div>The current conditions reported by the <a href = "http://www.aqmd.gov/">South Cost Air Quality Management District</a> are:</div>
+
+       <div>
+       <table class = "borderless-table">
+            <tr>
+                <td valign = "top" align = "right"><span style = "font-weight: bold">Ground-level ozone (ppb):</span></td>
+                <td valign = "top">{{current_O3}}</td>
+            </tr>
+            <tr>
+                <td valign = "top" align = "right"><span style = "font-weight: bold">Air temperature (&deg;F):</span></td>
+                <td valign = "top">{{current_temp}}</td>
+            </tr>
+            <tr>
+                <td valign = "top" align = "right"><span style = "font-weight: bold">Wind speed (mph):</span></td>
+                <td valign = "top">{{current_windspeed}}</td>
+            </tr>
+            <tr>
+                <td valign = "top" align = "right"><span style = "font-weight: bold">Wind direction (degrees from north):</span></td>
+                <td valign = "top">{{current_winddir}}</td>
+            </tr>
+            <tr>
+                <td valign = "top" align = "right"><span style = "font-weight: bold">Last update:</span></td>
+                <td valign = "top">{{current_time}}</td>
+            </tr>
+        </table><p>
+        </div>
+
+
+       <div>Using a 24-hour history of the data above, this model generated the following forecast:<p>
+       <center>
+       <img src="{{ url_for('static', filename = 'O3-forecast.svg') }}"><br>
+       <small><i>Gaps in the blue line indicate data were not reported by SCAQMD.</i></small><p></center>
+       </div>
+
+       <div><a href = "/about">Learn more</a> about how this prediction was generated.<p>&nbsp;<p>
+       </div>
+
+        <div>
+        <span style="font-size: small; font-style: italic">This page is best displayed on a tablet or larger device.<br>
+                                                          &copy; 2021 Joshua Hirner.<p>
+        <div style="font-size: small; font-style: italic"><a href = "https://github.com/jhirner/socal-air-quality">Explore this project on GitHub</a></div>
+        </div>
+        </div>
+    </body>
+</html>

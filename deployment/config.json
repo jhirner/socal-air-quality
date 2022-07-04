@@ -1,0 +1,9 @@
+{
+"query_url" : "https://xappp.aqmd.gov/aqdetail/AirQuality",
+"query_keepSiteCode" : "70087",
+"query_toExcel" : "",
+"db_path" : "aq.db",
+"preprocessor_path" :"model/preprocessor_pipeline.dill",
+"model_path" : "model/model",
+"plot_path" : "frontend/static/O3-forecast.svg"
+}
