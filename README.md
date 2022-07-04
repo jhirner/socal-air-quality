@@ -22,6 +22,8 @@ The set includes *185912* rows, with each row representing one hour between 1 Ja
 ## What else is included in this repo?
 This repository also includes Jupyter notebooks showing exploratory analysis (`O3-EDA.ipynb`) and transformation/scaling (`O3-preprocessing.ipynb`) of the ozone data in preparation for model training (`O3-forecast-LSTM.ipynb`).
 
+The repository also includes a basic Flask app for deploying the ozone forecast (under `frontend`).
+
 ## Sources & License
 These data were recorded by [South Coast Air Quality Management District](http://www.aqmd.gov/) and made public via their [web interface](https://xappp.aqmd.gov/aqdetail/). Data were aggregated and tabulated by this author's repository.
 
