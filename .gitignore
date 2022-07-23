@@ -27,3 +27,4 @@ venv.bak/
 # In-progress work
 *no2*
 *pm25*
+*.log
