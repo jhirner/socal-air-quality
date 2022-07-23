@@ -11,12 +11,16 @@ Los Angeles, CA 90012](https://duckduckgo.com/?q=1630+North+Main+Street+Los+Ange
 ## Requirements
 No installation is required to browse the analysis show in the Jupyter notebooks or to use the web app.
 
-Reproducing & extending the analysis requires the following Python 3 libraries:
-* pandas
-* numpy
+Reproducing & extending the analysis requires the following Python 3 libraries or compatible versions:
+* dill 0.3
+* numpy 1.22
+* pandas 1.4
+* scikeras 0.4
+* scikit-learn 1.1
+* tensorflow 2.8
 
-## How is the raw data (`la_aq.csv`) structured?
-The set includes *185912* rows, with each row representing one hour between 1 January 2000 and 31 December 2021. Although some individual timepoints are missing select measurements, included features are:
+## How is the raw data  structured?
+The raw data set (`la_aq.csv`) includes *185912* rows, with each row representing one hour between 1 January 2000 and 31 December 2021. Although some individual timepoints are missing select measurements, included features are:
 * CO: carbon monoxide, in ppm (parts per million)
 * NO2: nitrogen dioxide, in ppb (parts per billion)
 * O3: ozone, in ppb (parts per billion)
